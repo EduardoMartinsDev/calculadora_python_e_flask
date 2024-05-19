@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Percentuais</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Percentuais</h1>
+        <div class="form-group">
+            <label for="tipo">Tipo de Cálculo:</label>
+            <select id="tipo" name="tipo">
+                <option value="porcentagem">Calcular a porcentagem de um número</option>
+                <option value="valor">Calcular o valor que representa uma determinada porcentagem de um número</option>
+                <option value="aumento">Calcular o aumento percentual entre dois números</option>
+                <option value="reducao">Calcular a redução percentual entre dois números</option>
+            </select>
+        </div>
+        <div class="form-group" id="inputGroup1">
+            <label for="numero">Número:</label>
+            <input type="number" id="numero" name="numero">
+        </div>
+        <div class="form-group" id="inputGroup2">
+            <label for="percentual">Percentual:</label>
+            <input type="number" id="percentual" name="percentual">
+        </div>
+        <div class="form-group" id="inputGroup3">
+            <label for="valor_inicial">Valor Inicial:</label>
+            <input type="number" id="valor_inicial" name="valor_inicial">
+        </div>
+        <div class="form-group" id="inputGroup4">
+            <label for="valor_final">Valor Final:</label>
+            <input type="number" id="valor_final" name="valor_final">
+        </div>
+        <button onclick="calcular()">Calcular</button>
+        <div id="resultado"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
